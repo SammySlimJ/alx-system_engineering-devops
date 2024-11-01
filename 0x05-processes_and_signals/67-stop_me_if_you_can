@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+highlander_pid=$(pgrep -f "7-highlander")
+
+if [ -n "$highlander_pid" ]; then
+    kill "$highlander_pid"
+    echo "Stopped the 7-highlander process with PID: $highlander_pid"
+else
+    echo "No matching 7-highlander process found to stop."
+fi
