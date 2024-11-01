@@ -5,4 +5,9 @@ true = 0;
 while true; do
 	  echo 'To infinity and beyond'
 	  sleep 2
+	  if [ -f "/tmp/stop_infinity" ]; then
+        echo "Stopping the process as stop signal was found."
+        rm /tmp/stop_infinity  # Clean up the stop file
+        break
+    fi
 done

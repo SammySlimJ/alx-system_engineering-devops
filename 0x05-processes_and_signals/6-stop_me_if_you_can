@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Create the stop signal file to end the 4-to_infinity_and_beyond process
+touch /tmp/stop_infinity
+echo "Stop signal sent."
